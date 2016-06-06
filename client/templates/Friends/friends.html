@@ -1,0 +1,14 @@
+
+<template name="friends">
+    <div id="friends">
+      {{> errors}}
+      <h2 class="container__title" >Friends</h2>
+      <form id="add_friend">
+        <input type="text" placeholder="enter Email" name="friend_email" id="friend_username" />
+        <input type="submit" value="Add Friend" class="button_add button__general"/> <button type="button" class="button_del button__general" id="del_friend">Delete Friend</button>
+      </form>
+      {{> friendList}}
+    </div>
+
+</template>
+

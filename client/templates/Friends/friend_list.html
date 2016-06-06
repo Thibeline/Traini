@@ -1,0 +1,19 @@
+<template name="friendList">
+	<div>
+		
+		<p class="delimiter"> FOLLOWED</p>
+		{{#each followed_friends}}
+
+			{{>friendListFollowed}}
+
+		{{/each}}
+		
+   		<p class="delimiter"> NOT FOLLOWED</p>
+   		
+		{{#each unfollowed_friends}}
+
+			{{>friendListUnfollowed}}
+
+		{{/each}}
+	</div>	
+</template>

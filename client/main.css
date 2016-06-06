@@ -1,0 +1,139 @@
+/* CSS declarations go here */
+
+/* LAYOUT */
+
+.body {
+	font-family: "lato" serif;
+}
+
+/* MENU */
+
+
+
+/* HOME */
+
+/*CONTAINER*/
+.menu {
+	font-size: 1.3em;
+	position: fixed;
+	background-color: hsla(210, 50%, 50%, 0.5);
+	align: center;	
+	width: 100%;
+	margin-right: 20px;
+}
+
+.menu ul {
+	list-style-type: none;
+}
+
+.menu ul li{
+	margin-left: 2px;
+	display: inline-block;
+	min-width: 12%;
+	float: left;
+}
+
+.aside__container aside {
+	position: fixed;
+	border : 3px hsl(210, 60%, 50%) solid;
+	border-radius: 10px;
+	margin: 10px;
+	padding: 10px;
+	background-color: hsl(185, 40%, 70%);
+	width: 270px;
+	top: 30%;
+}
+
+.aside__container aside:first-child {
+	left: 5px;
+}
+
+.aside__container aside:last-child {
+	right: 5px;
+}
+
+.container__title {
+	margin-top: 5px;
+}
+
+
+.delimiter {
+	margin: 10px auto;
+	font-weight: bold;
+	font-size: 1.3em;
+}
+
+
+
+hr {
+	size: 5px;
+	width: 80%;
+	align: center;
+}
+
+.aside__container .delimiter:last-child::before {
+	content: "";
+	width: 80%;
+	height: 2px;
+	background-color: black;
+	display: block;
+	margin: 10px auto;
+}
+
+.friend_username {
+	font-size: 1.3em;
+	display: inline-block;
+}
+
+/* Button */
+
+.button_add {
+	background-color: hsl(130, 60%, 60%);
+}
+
+.button_del {
+	background-color: hsl(360, 88%, 43%);
+}
+
+.button__general {
+	margin: 2px;
+	padding: 5px;
+	margin: 5px 5px;
+	text-align: center;
+	border: 2px black solid;
+	border-radius: 10px;
+}
+
+.button__followed {
+	margin: 2px;
+	padding: 3px;
+	text-align: center;
+	border: 1px black solid;
+	float: right;
+	display: inline-block;
+}
+
+
+
+/*ERRORS*/
+
+.errors{
+	position: fixed;
+	z-index: 10000;
+	padding: 10px;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	pointer-events: none;
+}
+
+.alert {
+	animation: fadeOut 2700ms ease-in 0s 1 forwards;
+	-webkit-animation: fadeOut 2700ms ease-in 0s 1 forwards;
+	-moz-animation: fadeOut 2700ms ease-in 0s 1 forwards;
+	width: 250px;
+	float: right;
+	clear: both;
+	margin-bottom: 5px;pointer-events: auto;
+}
