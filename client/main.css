@@ -63,6 +63,16 @@
 	font-size: 1.3em;
 }
 
+.interrupt{
+	display: inline-block;
+}
+
+.interrupt_selector {
+	display: inline-block;
+	float: right;
+	margin-right: 7px;
+}
+
 
 
 hr {
@@ -80,7 +90,7 @@ hr {
 	margin: 10px auto;
 }
 
-.friend_username {
+.aside_list {
 	font-size: 1.3em;
 	display: inline-block;
 }
@@ -89,6 +99,10 @@ hr {
 
 .button_add {
 	background-color: hsl(130, 60%, 60%);
+}
+
+.button_buzy {
+	background-color: hsl(27, 80%, 52%);
 }
 
 .button_del {
