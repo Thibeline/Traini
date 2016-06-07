@@ -5,7 +5,7 @@ Template.friendListUnfollowed.events({
 		var friend_id = t.data._id;
 		
 
-		Meteor.call('followedFriend', friend_id, function(error, result){
+		Meteor.call('followFriend', friend_id, function(error, result){
 			if (error){
 				throw error;
 			}

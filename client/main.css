@@ -6,13 +6,16 @@
 	font-family: "lato" serif;
 }
 
-/* MENU */
 
+.test {
+	background-color: red;
+}
 
 
 /* HOME */
 
-/*CONTAINER*/
+/*MENU*/
+
 .menu {
 	font-size: 1.3em;
 	position: fixed;
@@ -20,6 +23,7 @@
 	align: center;	
 	width: 100%;
 	margin-right: 20px;
+	top : 0;
 }
 
 .menu ul {
@@ -33,6 +37,8 @@
 	float: left;
 }
 
+
+/* ASIDE */
 .aside__container aside {
 	position: fixed;
 	border : 3px hsl(210, 60%, 50%) solid;
@@ -40,7 +46,7 @@
 	margin: 10px;
 	padding: 10px;
 	background-color: hsl(185, 40%, 70%);
-	width: 270px;
+	width: 15%;
 	top: 30%;
 }
 
@@ -93,6 +99,44 @@ hr {
 .aside_list {
 	font-size: 1.3em;
 	display: inline-block;
+}
+
+/* MAIN */
+
+.box {
+	width: 65%;
+	margin: auto;
+	border : 2px black solid;
+	padding: 5px; 
+}
+
+.box_element {
+	display : inline-block;
+}
+
+.friend_box {
+	margin-top: 5px;
+	border-radius: 5px;
+}
+
+/* My Box */
+.my_box {
+	border : 4px black solid;
+	border-radius: 15px;
+	margin: auto;
+	margin-top: 50px;
+}
+
+.my_timer {
+	float : left;
+}
+
+.me {
+	float: right;
+}
+
+.who_ping {
+	align: center;
 }
 
 /* Button */

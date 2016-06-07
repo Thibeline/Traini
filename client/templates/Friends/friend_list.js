@@ -1,5 +1,5 @@
 Template.friendList.helpers({
-
+	
 	followed_friends: function() {
 		
 		var user_id = Meteor.userId();

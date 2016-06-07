@@ -1,54 +1,59 @@
 <template name="layout">
-        <div class="container">
-        <section >
-          <!-- Panneau principal au centre de la page, affiche le travaille en cours de l'équipe et les ping en attente.-->
+
+  <header class="menu">
+      <!-- Bandeau supérieur, pour insertion d'un menu -->
+    <nav>
+      <ul> 
+        <li>{{> loginButtons}} </li>
+        <li>
           <div>
-            
+            <p>For perso info</p>
           </div>
-        </section>
-      </div>
+        </li>
+        <li>
+          <div>
+            <p> Follow us on : </p>
+          </div>
+        </li>
+        <li><a href="#"> CONTACT </a></li>
+        <li><a href="#"> HOME </a> </li>  
+      </ul>
+    </nav>
+  </header>
+
+  <section >
+          <!-- Panneau principal au centre de la page, affiche le travaille en cours de l'équipe et les ping en attente.-->
+    <div>
+      {{> myBox}}
+    </div>
+    <div>
+      {{> friendsBox}}
+    </div>
+  </section>
 
 
 
 
 <!-- Bloc menu sorti du DOM -->
-    <header class="menu">
-      <!-- Bandeau supérieur, pour insertion d'un menu -->
-      <nav>
-        <ul> 
-          <li>{{> loginButtons}} </li>
-          <li>
-            <div>
-              <p>For perso info</p>
-            </div>
-          </li>
-          <li>
-            <div>
-              <p> Follow us on : </p>
-            </div>
-          </li>
-          <li><a href="#"> CONTACT </a></li>
-          <li><a href="#"> HOME </a> </li>  
-        </ul>
-      </nav>
-    </header>
 
-    <div class="aside__container">
-      <aside>
-        <!-- My timer, bloc de gauche destiné à contenir les informations et les controleurs relatifs à la gestion de mon temps.-->
-        {{>timers}}
-      </aside>
 
-      <aside>
-        <!--Friends, bloc de droite destiné à la gestion des l'équipe et des amis enregistrer. -->
-        {{>friends}}
-      </aside>
-    </div>
+  <div class="aside__container">
+    <aside>
+      <!-- My timer, bloc de gauche destiné à contenir les informations et les controleurs relatifs à la gestion de mon temps.-->
+      {{>timers}}
+    </aside>
+
+    <aside>
+      <!--Friends, bloc de droite destiné à la gestion des l'équipe et des amis enregistrer. -->
+      {{>friends}}
+    </aside>
+  </div>
 
 
 
-    <footer>
-      <!-- Pied de page pour les merdouilles habituelles.-->
 
-    </footer>
+  <footer>
+    <!-- Pied de page pour les merdouilles habituelles.-->
+
+  </footer>
 </template>
