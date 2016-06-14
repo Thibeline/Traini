@@ -5,7 +5,7 @@ Template.friendListFollowed.events({
 		var friend_id = t.data._id;
 		
 
-		Meteor.call('unfollowedFriend', friend_id, function(error, result){
+		Meteor.call('unfollowFriend', friend_id, function(error, result){
 			if (error){
 				throw error;
 			}
@@ -13,3 +13,4 @@ Template.friendListFollowed.events({
 
 	}
 });
+

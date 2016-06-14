@@ -2,46 +2,72 @@
 
 /* LAYOUT */
 
-.body {
+body {
 	font-family: "lato" serif;
+	padding-top: 60px;
+	background-color: hsl(222, 3%, 96%);
 }
-
-/* MENU */
 
 
 
 /* HOME */
 
-/*CONTAINER*/
-.menu {
-	font-size: 1.3em;
-	position: fixed;
-	background-color: hsla(210, 50%, 50%, 0.5);
-	align: center;	
+/* Navbar */
+
+.navbar {
+	height: 70px;
+	font-size: 1.5em;
+	vertical-align: middle;
+	position : fixed;
+	top : 0;
 	width: 100%;
-	margin-right: 20px;
+	line-height: 0px;
+	background-color: hsl(195, 54%, 60%);
+	border : none;
+	border-radius: 0px;
 }
 
-.menu ul {
-	list-style-type: none;
+.navbar-nav > li > a {
+	line-height: 38px;
 }
 
-.menu ul li{
-	margin-left: 2px;
-	display: inline-block;
-	min-width: 12%;
-	float: left;
+.navbar-default .navbar-nav > li > a {
+	color :hsl(222, 1%, 97%) ;
 }
 
+a {
+	color :hsl(222, 1%, 97%) ;
+}
+/* NOT CONNECT */
+.not_connect {
+	display: block;
+	margin : auto;
+	margin-top : 60px;
+}
+.not_connect_text {
+	text-align: center;
+	font-size: 2em;
+	color: red;
+	font-weight: bold;
+}
+
+#login-other-options>a {
+	color :hsl(195, 54%, 60%);
+}
+
+/* ASIDE */
 .aside__container aside {
+	z-index: 0;
 	position: fixed;
 	border : 3px hsl(210, 60%, 50%) solid;
 	border-radius: 10px;
 	margin: 10px;
 	padding: 10px;
-	background-color: hsl(185, 40%, 70%);
-	width: 270px;
+	background-color: hsl(195, 54%, 40%);
+	border : none;
+	width: 15%;
 	top: 30%;
+	color :hsl(222, 1%, 97%);
 }
 
 .aside__container aside:first-child {
@@ -81,19 +107,116 @@ hr {
 	align: center;
 }
 
-.aside__container .delimiter:last-child::before {
-	content: "";
-	width: 80%;
-	height: 2px;
-	background-color: black;
-	display: block;
-	margin: 10px auto;
-}
+
 
 .aside_list {
 	font-size: 1.3em;
 	display: inline-block;
 }
+
+input[type="text"] {
+	color : black;
+	width: 70%;
+}
+
+input[type="number"] {
+	color : black;
+	width: 70%;
+}
+/****** Aside Friend ******/
+.friend_info {
+	display: inline-block;
+}
+
+.friend_info>div {
+	display : none;
+}
+div, .friend_info:hover>div {
+	display:block;
+}
+
+
+/******* Aside timers *******/
+#start_timer>#delete {
+	display : none;
+}
+
+#start_timer:hover>#delete {
+	display: inline-block;
+}
+
+
+/* MAIN */
+
+.box {
+	width: 65%;
+	margin: auto;
+	border : 2px black solid;
+	padding: 5px;	
+}
+
+.top_box>button {
+	float : right;
+}
+
+.box_element {
+	display : inline-block;
+}
+
+.friends_box{
+	display: inline-block;
+}
+
+.friend_box {
+	margin-top: 10px;
+	border-radius: 5px;
+}
+
+.led {
+	padding: 3px;
+	border-radius: 3px;
+	max-width: 6px;
+}
+
+.favorite {
+	color: hsl(50, 91%, 51%);
+}
+
+/* My Box */
+.my_box {
+
+	border : 4px black solid;
+	border-radius: 15px;
+	margin: auto;
+}
+
+.my_timer {
+	/*float : left;*/
+	margin-right: 60px;
+}
+
+.me {
+	align-self: top;
+	float : right;
+}
+
+.who_ping {
+	vertical-align: top;
+	align-self: center;
+}
+
+#ping_element {
+	display : inline-block;
+}
+
+#ping_element>p { 
+	display: none;
+}
+
+#ping_element:hover>p {
+	display: block;
+}
+
 
 /* Button */
 
@@ -101,12 +224,34 @@ hr {
 	background-color: hsl(130, 60%, 60%);
 }
 
-.button_buzy {
+.button_busy {
 	background-color: hsl(27, 80%, 52%);
+}
+
+.button_inactive {
+	background-color: hsl(6, 0%, 59%);
 }
 
 .button_del {
 	background-color: hsl(360, 88%, 43%);
+}
+
+.button_icon_general {
+	border : none;
+	background : none;
+	padding: 0;
+	margin-left: 5px;
+
+}
+
+.button_icon_delete{
+	color: hsl(360, 88%, 43%);
+}
+
+.button_icon_add{
+	color :hsl(130, 51%, 51%);
+	font-size: 1.8em; 
+	margin-top: 8px;
 }
 
 .button__general {
@@ -118,16 +263,17 @@ hr {
 	border-radius: 10px;
 }
 
-.button__followed {
+.btn-default {
 	margin: 2px;
 	padding: 3px;
-	text-align: center;
-	border: 1px black solid;
+	color : inherit;
 	float: right;
 	display: inline-block;
 }
 
-
+.favorite {
+	color: hsl(50, 91%, 51%);
+}
 
 /*ERRORS*/
 
