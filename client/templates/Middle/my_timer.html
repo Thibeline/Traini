@@ -1,5 +1,10 @@
 <template name="myTimer">
 	<div class="box_element my_timer">
-		
+		{{#if getCountdown.exist}}
+			{{> mainTemplate}}
+		<p>Busy : {{getCountdown.out}}</p>
+		{{else}}
+			<p>{{getCountdown.out}}</p>
+		{{/if}}
 	</div>
 </template>

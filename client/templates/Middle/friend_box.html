@@ -1,9 +1,23 @@
 <template name="friendBox">
 	<div class="box friend_box">
+		<div class="top_box">
+			<div class="{{led _id}} led"></div>
+			<button type="button" id="button_favorite"><i class="fa fa-star {{is_favorite _id}}" aria-hidden="true"></i></button>
+		</div>
 
-		{{username}}
 
-		<button type="button" class="button_add button__general" id="button_ping">Ping </button>
 
+
+		{{>timer}}
+		
+		<div class="friend_info"><h4>{{username}}</h4></div>
+
+		<button type="button" class="button_add btn " id="button_ping">Ping </button>
+
+		<button type="button" class="{{sync_background _id}} btn " id="button_sync" {{disabled _id}}  >Sync</button>
+
+		<button type="button" class="{{sync_background_busy _id}} btn " id="button_sync_busy" {{disabled _id}}>Sync</button>
+		<p>{{ping _id}}</p>
+			
 	</div>
 </template>

@@ -1,6 +1,10 @@
 <template name="friendListFollowed">
 	<form>
-		<p class="aside_list">{{username}}</p><input type="submit" value="Unfollowed" class="button_del button__followed" id="unfollowed"/>
+		<div class="friend_info">
+			{{> friendListElement}}
+		</div>
+		
+		<input type="submit" value="Unfollowed" class="button_del btn btn-default" id="unfollowed"/>
 	</form>
 
 

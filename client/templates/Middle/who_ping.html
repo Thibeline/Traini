@@ -1,8 +1,8 @@
 <template name="whoPing">
 	<div class="box_element who_ping">
-		<h3> Who ping </h3>
+		<h4> Who ping </h4>
 		{{#each ping}}
-			<h4>{{username}}</h4>   {{time}}<br/>
+			{{>pingElement}}<br/>
 		{{/each}}
 	</div>
 </template>

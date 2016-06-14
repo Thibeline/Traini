@@ -1,31 +1,10 @@
 Template.friendList.helpers({
 	
-	followed_friends: function() {
+	followed_friends: function(fav) {
 		
-		var user_id = Meteor.userId();
-
-		if (user_id) {
-			var user = Meteor.users.findOne({"_id": user_id});
-
-		var friends = user.friends;
-		var array_followed_friends = [];
+	return followed_friends(fav);
 		
-		friends.forEach(function (value) {
-			if (value.followed == true) {
-				array_followed_friends.push(value.id);
-			}
-		});
-
-		var followed_friends = Meteor.users.find({
-					"_id": {$in :array_followed_friends}
-				});
-			
-		return followed_friends;
-
-		}
-		
-	
-	},
+	}, 
 
 	unfollowed_friends: function() {
 
@@ -54,4 +33,10 @@ Template.friendList.helpers({
 
 });
 
+Template.friendList.events({
+	'click #button_unfollowed_friend_list' : function(e) {
+		e.preventDefault();
+		$("#unfollowed_friend_list").toggle();
+	}
+})
 

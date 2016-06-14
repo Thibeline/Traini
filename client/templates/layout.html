@@ -1,8 +1,8 @@
 <template name="layout">
 
-  <header class="menu">
+  <header>
       <!-- Bandeau supérieur, pour insertion d'un menu -->
-    <nav>
+<!--     <nav>
       <ul> 
         <li>{{> loginButtons}} </li>
         <li>
@@ -18,9 +18,21 @@
         <li><a href="#"> CONTACT </a></li>
         <li><a href="#"> HOME </a> </li>  
       </ul>
-    </nav>
+    </nav> -->
+  {{> navbar}}
+
   </header>
 
+
+{{is_active}}
+{{stop_ping}}
+
+{{#unless currentUser}}
+
+  {{> notConnect}}
+
+ {{else}}
+<body>
   <section >
           <!-- Panneau principal au centre de la page, affiche le travaille en cours de l'équipe et les ping en attente.-->
     <div>
@@ -30,8 +42,6 @@
       {{> friendsBox}}
     </div>
   </section>
-
-
 
 
 <!-- Bloc menu sorti du DOM -->
@@ -50,10 +60,17 @@
   </div>
 
 
+</body>
 
 
   <footer>
     <!-- Pied de page pour les merdouilles habituelles.-->
 
   </footer>
+
+
+{{/unless}}
+
+
 </template>
+

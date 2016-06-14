@@ -1,9 +1,15 @@
 <template name="friendsBox">
-	<div>
-		{{#each followed_friends}}
+	<div name ="friends_box">
+		{{#each followed_friends 1}}
 
 			{{> friendBox}}
 
 		{{/each}}
+		{{#each followed_friends 0}}
+
+			{{> friendBox}}
+
+		{{/each}}
+
 	</div>
 </template>
