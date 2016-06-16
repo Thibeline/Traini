@@ -1,5 +1,7 @@
 Template.timers.helpers({
 	timer : function(){
+
+//Show timer in memory
 		var current_user_id = Meteor.userId();
 		var user = Meteor.users.findOne({"_id":current_user_id});
 		var timer=user.timer;
@@ -9,6 +11,9 @@ Template.timers.helpers({
 
 Template.timers.events({
 	'click #add_timer': function(e) {
+
+// Add a timer in memory 
+// take the value in the input and send to the method addTimer
 		e.preventDefault();
 		
 		var new_time= document.getElementById("time").value;

@@ -1,4 +1,4 @@
-Template.mainTemplate.circularOptions = function() {
+Template.circularTimer.circularOptions = function() {
     return {
         'canvasSize': 130,
         'arcWidth': 10,

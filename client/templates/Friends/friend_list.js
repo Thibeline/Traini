@@ -1,5 +1,8 @@
 Template.friendList.helpers({
 	
+// To ordonne the list of followed friends. 
+// Return an array with users object.
+
 	followed_friends: function(fav) {
 		
 	return followed_friends(fav);
@@ -8,6 +11,8 @@ Template.friendList.helpers({
 
 	unfollowed_friends: function() {
 
+// to return the list of unfollowed friends.
+// Return an array with users object.
 		var user_id = Meteor.userId();
 
 		if (user_id) {
@@ -34,6 +39,8 @@ Template.friendList.helpers({
 });
 
 Template.friendList.events({
+
+// Show or hide the list of unfollowed frend.
 	'click #button_unfollowed_friend_list' : function(e) {
 		e.preventDefault();
 		$("#unfollowed_friend_list").toggle();

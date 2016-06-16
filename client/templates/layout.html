@@ -1,30 +1,11 @@
 <template name="layout">
 
   <header>
-      <!-- Bandeau supérieur, pour insertion d'un menu -->
-<!--     <nav>
-      <ul> 
-        <li>{{> loginButtons}} </li>
-        <li>
-          <div>
-            <p>For perso info</p>
-          </div>
-        </li>
-        <li>
-          <div>
-            <p> Follow us on : </p>
-          </div>
-        </li>
-        <li><a href="#"> CONTACT </a></li>
-        <li><a href="#"> HOME </a> </li>  
-      </ul>
-    </nav> -->
+
   {{> navbar}}
 
   </header>
 
-
-{{is_active}}
 {{stop_ping}}
 
 {{#unless currentUser}}

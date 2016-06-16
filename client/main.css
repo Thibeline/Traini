@@ -5,7 +5,7 @@
 body {
 	font-family: "lato" serif;
 	padding-top: 60px;
-	background-color: hsl(222, 3%, 96%);
+	background-color: hsl(195, 74%, 96%);
 }
 
 
@@ -33,10 +33,15 @@ body {
 
 .navbar-default .navbar-nav > li > a {
 	color :hsl(222, 1%, 97%) ;
+
 }
 
 a {
 	color :hsl(222, 1%, 97%) ;
+}
+
+.follow_us {
+	background-color: hsl(195, 54%, 60%);
 }
 /* NOT CONNECT */
 .not_connect {
@@ -51,6 +56,17 @@ a {
 	font-weight: bold;
 }
 
+.navbar-default .navbar-nav > .open > a:focus {
+    background-color: hsl(195, 54%, 60%);
+}
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+    background-color: hsl(195, 54%, 60%);
+}
+
+#login-other-options>a {
+	color :hsl(195, 54%, 60%);
+}
 
 
 /* ASIDE */
@@ -112,6 +128,15 @@ hr {
 	display: inline-block;
 }
 
+input[type="text"] {
+	color : black;
+	width: 70%;
+}
+
+input[type="number"] {
+	color : black;
+	width: 70%;
+}
 
 /****** Aside Friend ******/
 .friend_info {
@@ -160,12 +185,26 @@ div, .friend_info:hover>div {
 .friend_box {
 	margin-top: 10px;
 	border-radius: 5px;
+	background-color: hsl(195, 74%, 70%);
+}
+
+.friend_box>button {
+	margin-left: 20px;
 }
 
 .led {
-	padding: 3px;
-	border-radius: 3px;
-	max-width: 6px;
+	padding: 5px;
+	border-radius: 8px;
+	max-width: 10px;
+	border : 2px black solid;
+}
+
+.led_connect {
+	background-color: hsl(130, 98%, 53%);
+}
+
+.led_disconnect {
+	background-color: hsl(1, 98%, 56%);
 }
 
 .favorite {
@@ -174,9 +213,9 @@ div, .friend_info:hover>div {
 
 /* My Box */
 .my_box {
-
-	border : 4px black solid;
-	border-radius: 15px;
+	background-color: hsl(195, 74%, 45%);
+	border : 3px black solid;
+	border-radius: 5px;
 	margin: auto;
 }
 
@@ -211,19 +250,23 @@ div, .friend_info:hover>div {
 /* Button */
 
 .button_add {
-	background-color: hsl(130, 60%, 60%);
+	background-color: hsl(130, 70%, 45%);
+	color : black;
 }
 
 .button_busy {
 	background-color: hsl(27, 80%, 52%);
+	color : black;
 }
 
 .button_inactive {
 	background-color: hsl(6, 0%, 59%);
+	color : black;
 }
 
 .button_del {
 	background-color: hsl(360, 88%, 43%);
+	color : black;
 }
 
 .button_icon_general {

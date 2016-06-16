@@ -9,13 +9,16 @@ Template.myTimer.helpers({
 
 
     getCountdown: function() {
+//to show our countdown
 
     	var current_user_id = Meteor.userId();
     	var user_timer = Meteor.users.findOne({"_id": current_user_id}, {fields: {'runningTimer':1}});
-    	
+
+//test if a running timer exist.
     	if (user_timer.runningTimer){
 	    	var time = countdown.get();
-	    	
+
+// test if countdown exist, if yes, take the time, else, create one.	    	
 	    	if (time) {
 	    		
 		    	var ss = time%60;
@@ -32,6 +35,7 @@ Template.myTimer.helpers({
 	    		};	
 	    	};
 
+// test if we are busy
 	    	if(user_timer.runningTimer.busy == true){
 	    		var busy = "oui";
 			} else {
@@ -40,11 +44,11 @@ Template.myTimer.helpers({
 
 			var result ={
     			exist : true,
-    		 	out : "busy"
+    		 	out : busy
     		};
 
 
-
+//Change the session value for circular countdown
 	    	var init_time_lenght = (user_timer.runningTimer.timerEnd - user_timer.runningTimer.timerStart)/1000;
 	    	var percent = ((init_time_lenght-time)/init_time_lenght)*100;
     		Session.set('progressPercent',percent);
@@ -66,47 +70,15 @@ Template.myTimer.helpers({
     },
 
 
- 
-
-
 });
 
- //    	var current_user_id = Meteor.userId();
- //    	var user_timer = Meteor.users.findOne({"_id": current_user_id}, {fields: {'runningTimer':1}});
-	// 	    	// set the date we're counting down to
+Template.myTimer.events({
+	'click #delete' : function (e) {
+//to delete a timer during is work.
+		e.preventDefault
+		countdown.stop();
+		var current_user_id = Meteor.userId();
+		Meteor.users.update({"_id": current_user_id},{$unset:{'runningTimer':""}});
 
-	// 	var target_date = user_timer.runningTimer.timerEnd;
-
-	// 	console.log(target_date);
-		 
-	// 	// variables for time units
-	// 	var days, hours, minutes, seconds;
-		 
-	// 	// get tag element
-	// 	var countdown = document.getElementById('countdown');
-		 
-	// 	console.log("1  " + refreshIntervalId);
-	// 	//console.log("2  " + globalId);
-
-	// 	//clearInterval(refreshIntervalId);
-
-	// 	// update the tag with id "countdown" every 1 second
-	// 	 var refreshIntervalId = setInterval(function () {
-		 
-	// 	    // find the amount of "seconds" between now and target
-	// 	    var current_date = new Date().getTime();
-	// 	    var seconds_left = (target_date - current_date) / 1000;
-		     
-	// 	    minutes = parseInt(seconds_left / 60);
-	// 	    seconds = parseInt(seconds_left % 60);
-	// 	    console.log(minutes);
-
-	// 	    // format countdown string + set tag value
-	// 	    //countdown.innerHTML =  '<span class="minutes">'
-	// 	   // + minutes + ' <b>Minutes</b></span> <span class="seconds">' + seconds + ' <b>Seconds</b></span>';  
-		 
-	// 	}, 1000);
-			
-	// 	globalId = refreshIntervalId;
-	// 	console.log(globalId);
-	// },
+	}
+});

@@ -1,4 +1,7 @@
 Template.timerElement.events({
+	
+//Start a timer by creating the well time variable and inject in the methode startTime
+//After that start the countdown on the client side.
 	'submit #start_timer': function(e,t) {
 		e.preventDefault();
 

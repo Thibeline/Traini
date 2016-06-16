@@ -1,5 +1,6 @@
 <template name="friendsBox">
 	<div name ="friends_box">
+<!-- followed_friends return an array of friend, 1 or 0 in input is to select if we want fav friend or not. For each friend in the array we create a friendBox -->
 		{{#each followed_friends 1}}
 
 			{{> friendBox}}

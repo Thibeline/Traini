@@ -1,5 +1,6 @@
 Template.friendListFollowed.events({
 	'submit' :function(e, t) {
+//To put a followed friend in unfollow
 		e.preventDefault();
 
 		var friend_id = t.data._id;
