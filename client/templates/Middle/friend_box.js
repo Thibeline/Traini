@@ -23,7 +23,7 @@ Template.friendBox.events({
 		var running_timer = t.data.runningTimer;
 
 		if (running_timer){
-
+			running_timer.busy = false;
 			Meteor.call('syncTimer',running_timer , function(error,result){
 				if (error){
 					throw error
@@ -47,7 +47,7 @@ Template.friendBox.events({
 		var running_timer = t.data.runningTimer;
 
 		if (running_timer){
-
+			running_timer.busy = true;
 			Meteor.call('syncTimer',running_timer , function(error,result){
 				if (error){
 					throw error
