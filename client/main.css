@@ -169,6 +169,9 @@ div, .friend_info:hover>div {
 	border : 2px black solid;
 	padding: 5px;	
 }
+.top_box {
+	display: inline;
+}
 
 .top_box>button {
 	float : right;
@@ -178,9 +181,6 @@ div, .friend_info:hover>div {
 	display : inline-block;
 }
 
-.friends_box{
-	display: inline-block;
-}
 
 .friend_box {
 	margin-top: 10px;
@@ -192,11 +192,17 @@ div, .friend_info:hover>div {
 	margin-left: 20px;
 }
 
+.sync {
+	display: inline-block;
+}
+
 .led {
 	padding: 5px;
 	border-radius: 8px;
 	max-width: 10px;
 	border : 2px black solid;
+	display : inline-block;
+	margin-right: 30px;
 }
 
 .led_connect {

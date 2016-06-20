@@ -17,15 +17,13 @@ Template.myTimer.helpers({
 //test if a running timer exist.
     	if (user_timer.runningTimer){
 	    	var time = countdown.get();
-
 // test if countdown exist, if yes, take the time, else, create one.	    	
 	    	if (time) {
-	    		
 		    	var ss = time%60;
 		    	var mm = Math.floor(time/60);
 		    	var result1 = mm +'m' + ss + 's';
 	    	} else {
-
+	    		console.log("3");
 				var time_lenght = duration(user_timer);
 
 				if (time_lenght < 0) {

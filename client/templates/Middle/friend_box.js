@@ -4,7 +4,12 @@ Template.friendBox.events({
 // To ping a friend, the information is stock in his side
 		e.preventDefault();
 		var id = t.data._id;
-		Meteor.call('ping', id, function(error, result){
+		var message = document.getElementById(t.data.username).value;
+		if (!message) {
+			message = "No message"
+		}
+		console.log(message);
+		Meteor.call('ping', id, message, function(error, result){
 			if (error){
 				throw error;
 			}

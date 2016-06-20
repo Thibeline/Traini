@@ -1,23 +1,30 @@
 <template name="friendBox">
 	<div class="box friend_box">
 		<div class="top_box">
-			<div class="{{led _id}} led"></div>
+			<div class="{{led _id}} led"></div><h4 class="box_element">{{username}}</h4>
+
 			<button type="button" id="button_favorite"><i class="fa fa-star {{is_favorite _id}}" aria-hidden="true"></i></button>
-		</div>
-
-
-
-
-		{{>timer}}
-		
-		<div class="friend_info"><h4>{{username}}</h4></div>
-
-		<button type="button" class="button_add btn " id="button_ping">Ping </button>
-
-		<button type="button" class="{{sync_background _id}} btn " id="button_sync" {{disabled _id}}  >Sync</button>
-
-		<button type="button" class="{{sync_background_busy _id}} btn " id="button_sync_busy" {{disabled _id}}>Sync</button>
-		<p>{{ping _id}}</p>
 			
+		</div>
+		
+		<div class="friend_box_main">
+
+
+			{{>timer}}
+			
+			<div class="sync">
+					<button type="button" class="{{sync_background _id}} btn " id="button_sync" {{disabled _id}}  >Sync</button>
+
+					<button type="button" class="{{sync_background_busy _id}} btn " id="button_sync_busy" {{disabled _id}}>Sync</button>
+
+			</div>
+
+			<form id="form_ping">
+				<button type="button" class="button_add btn " id="button_ping">Ping </button>
+				<input type="text" placeholder="optionnal message" id="{{username}}" maxlength="50">
+			</form>	
+
+			<p>{{ping _id}}</p>
+		</div>	
 	</div>
 </template>
