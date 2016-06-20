@@ -51,6 +51,7 @@ Template.myTimer.helpers({
 	    	var percent = ((init_time_lenght-time)/init_time_lenght)*100;
     		Session.set('progressPercent',percent);
     		Session.set('timer', result1);
+    		document.title = result1 + " - WatchUs";
 
 
     	} else {
@@ -59,6 +60,8 @@ Template.myTimer.helpers({
     			exist : false,
     		 	out : "no running timer"
     		};
+
+    		document.title = "WatchUs";
     	};
     	
     	return result;
