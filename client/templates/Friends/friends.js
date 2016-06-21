@@ -5,7 +5,7 @@ Template.friends.events({
 		
 		var email= document.getElementById("friend_email").value;
 		
-		Meteor.call('addFriend', email, function(error,result) {
+		Meteor.call('askFriend', email, function(error,result) {
 			if (error) {
 				return throwError (error.reason);
 			}

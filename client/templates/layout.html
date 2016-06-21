@@ -13,45 +13,9 @@
   {{> notConnect}}
 
  {{else}}
-<body>
-  <section >
-          <!-- Panneau principal au centre de la page, affiche le travaille en cours de l'équipe et les ping en attente.-->
-    <div>
-      {{> myBox}}
-    </div>
-    <div>
-      {{> friendsBox}}
-    </div>
-  </section>
 
-
-<!-- Bloc menu sorti du DOM -->
-
-
-  <div class="aside__container">
-    <aside>
-      <!-- My timer, bloc de gauche destiné à contenir les informations et les controleurs relatifs à la gestion de mon temps.-->
-      {{>timers}}
-    </aside>
-
-    <aside>
-      <!--Friends, bloc de droite destiné à la gestion des l'équipe et des amis enregistrer. -->
-      {{>friends}}
-    </aside>
-  </div>
-
-
-</body>
-
-
-  <footer>
-    <!-- Pied de page pour les merdouilles habituelles.-->
-
-  </footer>
-
+  {{> yield}}
 
 {{/unless}}
-
-
 </template>
 

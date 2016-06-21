@@ -68,6 +68,9 @@ a {
 	color :hsl(195, 54%, 60%);
 }
 
+.hide {
+	display : none;
+}
 
 /* ASIDE */
 .aside__container aside {
@@ -300,6 +303,11 @@ div, .friend_info:hover>div {
 	text-align: center;
 	border: 2px black solid;
 	border-radius: 10px;
+}
+
+.button_icon_sizeup {
+	font-size: 1.8em;
+	margin-left: 30px
 }
 
 .btn-default {

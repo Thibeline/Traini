@@ -22,6 +22,8 @@
 	        </li>
 	      </ul>
 	      <ul class="nav navbar-nav navbar-right">
+	      	<li><a href="{{pathFor 'home'}}"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+	      	<li><a href="{{pathFor 'friendPanel'}}"><i class="fa fa-user{{asking_friend}}" aria-hidden="true"></i></a></li>
 	        <li><a href="#">{{> loginButtons}}</a></li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
@@ -29,3 +31,4 @@
 	</nav>
 
 </template>
+
