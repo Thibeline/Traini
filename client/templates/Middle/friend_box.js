@@ -8,7 +8,7 @@ Template.friendBox.events({
 		if (!message) {
 			message = "No message"
 		}
-		console.log(message);
+
 		Meteor.call('ping', id, message, function(error, result){
 			if (error){
 				throw error;
@@ -94,7 +94,7 @@ Template.friendBox.helpers({
 	sync_background : function (id) {
 		var user_timer = Meteor.users.findOne({"_id":id}, {fields: {'runningTimer':1}});
 		if (user_timer.runningTimer && duration(user_timer) > 0){
-			console.log(duration(user_timer));
+
 			return "button_add";
 
 		} else {
