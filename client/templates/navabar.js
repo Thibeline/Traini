@@ -5,8 +5,8 @@ Template.navbar.helpers({
 			
 			var current_user = Meteor.users.findOne({_id:current_user_id});
 			var array_demand = current_user.friends_demand;
-
-			if (array_demand[0]) {
+			var test = array_demand.length;
+			if (test>0) {
 			
 				return "-plus";
 			}

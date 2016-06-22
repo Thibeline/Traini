@@ -4,6 +4,14 @@ Template.friendBox.events({
 // To ping a friend, the information is stock in his side
 		e.preventDefault();
 		var id = t.data._id;
+		var current_user_id = Meteor.userId();
+		if (Meteor.users.findOne({_id:id, "ping._id":current_user_id})) {
+			var confirm = window.confirm("Are you sure you want to send an other Ping? It will erase the former ping.");
+				if (!confirm) {
+					return
+				}
+		}
+
 		var message = document.getElementById(t.data.username).value;
 		if (!message) {
 			message = "No message"
@@ -22,22 +30,30 @@ Template.friendBox.events({
 //To synchronize our timer to a friend one and not be busy	
 		var running_timer = t.data.runningTimer;
 
-		if (running_timer){
-			running_timer.busy = false;
-			Meteor.call('syncTimer',running_timer , function(error,result){
-				if (error){
-					throw error
-				}
-			});
+		var current_user_id = Meteor.userId();
+		var user = Meteor.users.findOne({"_id": current_user_id});
+		var ping = user.ping;
+		var test = ping.length;
+		if (test > 0) {
+			var confirm = window.confirm("Are you sure you want to start a new timer? It will delete all your current ping.");
+				if (!confirm) {
+					return
+				};
+		};
 
-			var user_timer = t.data;
+		running_timer.busy = false;
+		Meteor.call('syncTimer',running_timer , function(error,result){
+			if (error){
+				throw error
+			}
+		});
 
-			var time_lenght = duration(user_timer);
+		var user_timer = t.data;
 
-			start_countdown(time_lenght);
-		} else {
-			throw new Meteor.Error('No timer running',"There is no timer running to synchronise you");
-		}
+		var time_lenght = duration(user_timer);
+
+		start_countdown(time_lenght);
+
 	},
 
 	'click #button_sync_busy':function (e, t) {
@@ -46,25 +62,32 @@ Template.friendBox.events({
 		
 		var running_timer = t.data.runningTimer;
 
-		if (running_timer){
-			running_timer.busy = true;
-			Meteor.call('syncTimer',running_timer , function(error,result){
-				if (error){
-					throw error
-				}
-			});
+		var current_user_id = Meteor.userId();
+		var user = Meteor.users.findOne({"_id": current_user_id});
+		var ping = user.ping;
+		var test = ping.length;
+		if (test > 0) {
+			var confirm = window.confirm("Are you sure you want to start a new timer? It will delete all your current ping.");
+				if (!confirm) {
+					return
+				};
+		};
+
+		running_timer.busy = true;
+		Meteor.call('syncTimer',running_timer , function(error,result){
+			if (error){
+				throw error
+			}
+		});
 
 
-			var user_timer = t.data;
+		var user_timer = t.data;
 
-			var time_lenght = duration(user_timer);
+		var time_lenght = duration(user_timer);
 
-			start_countdown(time_lenght);
+		start_countdown(time_lenght);
 
-		} else {
-			return new Meteor.Error('No timer running',"There is no timer running to synchronise you");
 
-		}
 	},
 
 	'click #button_favorite' : function(e,t) {

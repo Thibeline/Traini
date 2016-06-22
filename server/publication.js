@@ -31,12 +31,16 @@ Meteor.publishComposite('userData', {
 					 'runningTimer':1,
 					 'status':1,
 					 'ping':1}});
-			}
+			},
+		
+
 		},
 		{
 			find : function() {
 				return Meteor.users.find({}, {fiels : {'_id' : 1}});
-			}
+			}	
 		}
+	
 	]
+
 });

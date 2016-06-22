@@ -60,7 +60,7 @@ Template.myTimer.helpers({
 
     		var result ={
     			exist : false,
-    		 	out : "no running timer"
+    		 	out : Spacebars.SafeString('<i class="fa fa-bell-slash button_icon_sizeup button_icon_delete" aria-hidden="true"></i>')
     		};
 
     		document.title = "Watchus" ;

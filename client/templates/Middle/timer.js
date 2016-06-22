@@ -43,7 +43,7 @@ Template.timer.helpers({
 
     } else {
 
-    	var result = "no running timer";
+    	return Spacebars.SafeString('<i class="fa fa-bell-slash button_icon_sizeup button_icon_delete" aria-hidden="true"></i>');
  
     };
     	return result;		

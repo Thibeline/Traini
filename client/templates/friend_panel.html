@@ -15,7 +15,7 @@
 				<tr>
 					<td>{{username}}</td>
 					<td>{{emails.[0].address}}</td>
-					<td><form><button value="{{_id}}" type="submit" id="add_friend" class="button_icon_add button_icon_general"><i class="fa fa-check" aria-hidden="true"></i></button><button value="{{_id}}" type="submit" id="delete" class="button_icon_delete button_icon_general button_icon_sizeup">  <i class="fa fa-times" aria-hidden="true"></i></button></form></td>
+					<td><form><button value="{{_id}}" type="submit" id="add_friend" class="button_icon_add button_icon_general"><i value="{{_id}}" class="fa fa-check" aria-hidden="true"></i></button><button value="{{_id}}" type="submit" id="delete" class="button_icon_delete button_icon_general button_icon_sizeup">  <i value="{{_id}}" class="fa fa-times" aria-hidden="true"></i></button></form></td>
 				</tr>
 				{{/each}}
 		  </table>
@@ -70,7 +70,7 @@
 				<tr>
 					<td>{{username}}</td>
 					<td>{{emails.[0].address}}</td>
-					<td><form><button value="{{_id}}" type="submit" id="cancel" class="button_icon_delete button_icon_general button_icon_sizeup">  <i class="fa fa-times" aria-hidden="true"></i></button></form></td>
+					<td><form><button value="{{_id}}" type="submit" id="cancel" class="button_icon_delete button_icon_general button_icon_sizeup">  <i value="{{_id}}" class="fa fa-times" aria-hidden="true"></i></button></form></td>
 				</tr>
 				{{/each}}
 		  </table>

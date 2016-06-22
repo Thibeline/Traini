@@ -21,7 +21,7 @@ Template.whoPing.helpers({
 			var ping_element = {
 				username : pinger.username,
 				time : value.time,
-				message : value.message,
+				message : "\"" + value.message + "\"",
 				id : value._id
 			};
 			array_ping.push(ping_element);

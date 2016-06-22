@@ -4,6 +4,17 @@ Template.timerElement.events({
 //After that start the countdown on the client side.
 	'submit #start_timer': function(e,t) {
 		e.preventDefault();
+		
+		var current_user_id = Meteor.userId();
+		var user = Meteor.users.findOne({"_id": current_user_id});
+		var ping = user.ping;
+		var test = ping.length;
+		if (test > 0) {
+			var confirm = window.confirm("Are you sure you want to start a new timer? It will delete all your current ping.");
+				if (!confirm) {
+					return
+				};
+		};
 
 		var time = {
 			time:t.data,
@@ -23,6 +34,17 @@ Template.timerElement.events({
 
 	'click #start' : function(e,t) {
 		e.preventDefault();
+
+		var current_user_id = Meteor.userId();
+		var user = Meteor.users.findOne({"_id": current_user_id});
+		var ping = user.ping;
+		var test = ping.length;
+		if (test > 0) {
+			var confirm = window.confirm("Are you sure you want to start a new timer? It will delete all your current ping.");
+				if (!confirm) {
+					return
+				};
+		};
 
 		var time = {
 			time:t.data,

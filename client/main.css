@@ -72,6 +72,23 @@ a {
 	display : none;
 }
 
+.fa-user-plus {
+	color: hsl(360, 88%, 43%);
+	font-size: 1.5em;
+}
+
+/* FRIEND PANEL */
+
+.table>tr>th {
+	width : 30%;
+	padding-left: 25px;
+}
+
+.table>tr>td {
+	width : 30%;
+	padding-left: 15px;
+}
+
 /* ASIDE */
 .aside__container aside {
 	z-index: 0;
@@ -82,7 +99,7 @@ a {
 	padding: 10px;
 	background-color: hsl(195, 54%, 40%);
 	border : none;
-	width: 15%;
+	width: 20%;
 	top: 30%;
 	color :hsl(222, 1%, 97%);
 }
@@ -167,7 +184,7 @@ div, .friend_info:hover>div {
 /* MAIN */
 
 .box {
-	width: 65%;
+	width: 55%;
 	margin: auto;
 	border : 2px black solid;
 	padding: 5px;	
@@ -195,8 +212,22 @@ div, .friend_info:hover>div {
 	margin-left: 20px;
 }
 
+.username {
+	font-size: 1.8em;
+	font-weight: bold;
+	margin-top: -4px;
+	text-decoration: underline;
+}
+
 .sync {
 	display: inline-block;
+}
+
+.body_friend_title{
+	width: 55%;
+	margin: auto;
+	padding-top: 15px;
+	margin-bottom: -5px;
 }
 
 .led {
@@ -231,6 +262,7 @@ div, .friend_info:hover>div {
 .my_timer {
 	/*float : left;*/
 	margin-right: 60px;
+	margin-top: 5px;
 }
 
 .me {
@@ -245,6 +277,10 @@ div, .friend_info:hover>div {
 
 #ping_element {
 	display : inline-block;
+}
+
+.ialic {
+	font-style: italic;
 }
 
 #ping_element>p { 
