@@ -37,7 +37,9 @@ Meteor.publishComposite('userData', {
 		},
 		{
 			find : function() {
-				return Meteor.users.find({}, {fiels : {'_id' : 1}});
+				return Meteor.users.find({}, {fiels : 
+					{'_id' : 1,
+					'username': 1}});
 			}	
 		}
 	

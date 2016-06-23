@@ -161,6 +161,7 @@ input[type="number"] {
 /****** Aside Friend ******/
 .friend_info {
 	display: inline-block;
+	z-index: -1;
 }
 
 .friend_info>div {
@@ -169,6 +170,18 @@ input[type="number"] {
 div, .friend_info:hover>div {
 	display:block;
 }
+
+.-autocomplete-container {
+	position : relative;
+	top:0px !important;
+}
+
+.label{
+
+	color:black;
+	font-size: 1.1em;
+}
+
 
 
 /******* Aside timers *******/

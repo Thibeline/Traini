@@ -3,9 +3,9 @@ Template.friends.events({
 // to add a friend in our list, use this email to find him.
 		e.preventDefault();
 		
-		var email= document.getElementById("friend_email").value;
+		var username= document.getElementById("friend_username").value;
 		
-		Meteor.call('askFriend', email, function(error,result) {
+		Meteor.call('askFriend', username, function(error,result) {
 			if (error) {
 				return throwError (error.reason);
 			}
@@ -13,3 +13,20 @@ Template.friends.events({
 		});
 	},
 });
+
+Template.friends.helpers({
+  settings: function() {
+    return {
+      position: "bottom",
+      limit: 5,
+      rules: [
+        {
+          collection: Meteor.users,
+          field: "username",
+          template: Template.userPill
+        }
+      ]
+    };
+  }
+});
+

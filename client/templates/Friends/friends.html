@@ -4,7 +4,8 @@
       {{> errors}}
       <h2 class="container__title" >Friends</h2>
       <form id="add-friend">
-        <input type="text" placeholder="enter Email" name="friend_email" id="friend_email" />
+        <!-- <input type="text" placeholder="enter Username" name="friend_username" id="friend_username" /> -->
+        {{> inputAutocomplete settings=settings id="friend_username" placeholder="enter Username" name="friend_username"}}
         <button type="button" id="add_friend" class="button_icon_general button_icon_add"><i class="fa fa-plus" aria-hidden="true"></i></button>
         </form>
       {{> friendList}}
