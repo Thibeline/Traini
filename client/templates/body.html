@@ -1,32 +1,34 @@
 <template name="bodi">
 <body>
-	  <section >
+	 
+	 	<div class="aside__container col-md-3 ">
+		      <!-- My timer, bloc de gauche destiné à contenir les informations et les controleurs relatifs à la gestion de mon temps.-->
+	 	<aside>
+	 	{{>timers}}
+
+	    </aside>
+		</div>
+	  <section class="col-md-6 central_box">
 	          <!-- Panneau principal au centre de la page, affiche le travaille en cours de l'équipe et les ping en attente.-->
 	    <div>
 	      {{> myBox}}
 	    </div>
 
-	    <h3 class="body_friend_title">My following friends</h3>
+	    <h3> My following friends</h3>
 	    <div>
 	      {{> friendsBox}}
 	    </div>
 	  </section>
 
+	 	<div class="aside__container col-md-3">
+		      <!--Friends, bloc de droite destiné à la gestion des l'équipe et des amis enregistrer. -->
+	 	<aside>
+	 	 {{>friends}}
 
-	<!-- Bloc menu sorti du DOM -->
-
-
-	  <div class="aside__container">
-	    <aside>
-	      <!-- My timer, bloc de gauche destiné à contenir les informations et les controleurs relatifs à la gestion de mon temps.-->
-	      {{>timers}}
 	    </aside>
+		</div>
 
-	    <aside>
-	      <!--Friends, bloc de droite destiné à la gestion des l'équipe et des amis enregistrer. -->
-	      {{>friends}}
-	    </aside>
-	  </div>
+
 
 
 	</body>

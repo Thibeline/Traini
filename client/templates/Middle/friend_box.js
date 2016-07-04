@@ -5,13 +5,13 @@ Template.friendBox.events({
 		e.preventDefault();
 		var id = t.data._id;
 		var current_user_id = Meteor.userId();
-		if (Meteor.users.findOne({_id:id, "ping._id":current_user_id})) {
+		/*if (Meteor.users.findOne({_id:id, "ping._id":current_user_id})) {
 			var confirm = window.confirm("Are you sure you want to send an other Ping? It will erase the former ping.");
 				if (!confirm) {
 					return
 				}
 		}
-
+		*/
 		var message = document.getElementById(t.data.username).value;
 		if (!message) {
 			message = "No message"

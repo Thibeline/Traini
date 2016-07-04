@@ -34,9 +34,8 @@ Template.timer.helpers({
 			var time = window['countdown'+id].get();
 	    	if (time) {
 //Send the time
-		    	var ss = time%60;
 		    	var mm = Math.floor(time/60);
-		    	var result = mm +'m' + ss + 's';
+		    	var result = mm +'m';
 	    	};
 
 

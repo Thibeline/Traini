@@ -2,8 +2,8 @@ Template.pingElement.events({
 	'click #delete_ping' : function (e,t) {
 		e.preventDefault();
 		var id = t.data.id;
-		console.log(t.data);
-		Meteor.call('delete_ping', id);
+		var date = t.data.time;
+		Meteor.call('delete_ping', id, date);
 	},
 
 	'mouseover #ping_element' : function(e,t) {

@@ -23,10 +23,10 @@ Template.myTimer.helpers({
 		    	var mm = Math.floor(time/60);
 		    	var result1 = mm +'m' + ss + 's';
 	    	} else {
-	    		console.log("3");
+	    		
 				var time_lenght = duration(user_timer);
 
-				if (time_lenght < 0) {
+				if (time_lenght <= 0) {
 					Meteor.users.update({"_id": current_user_id},{$unset:{'runningTimer':""}});
 	    		}else{
 	    			start_countdown(time_lenght);

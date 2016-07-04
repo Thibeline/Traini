@@ -6,6 +6,7 @@ body {
 	font-family: "lato" serif;
 	padding-top: 60px;
 	background-color: hsl(195, 74%, 96%);
+
 }
 
 
@@ -25,6 +26,7 @@ body {
 	background-color: hsl(195, 54%, 60%);
 	border : none;
 	border-radius: 0px;
+	z-index: 10;
 }
 
 .navbar-nav > li > a {
@@ -43,6 +45,16 @@ a {
 .follow_us {
 	background-color: hsl(195, 54%, 60%);
 }
+
+#login-other-options > a {
+    color: hsl(195, 54%, 35%) !important;
+}
+
+#login-dropdown-list .dropdown-menu {
+    min-width: 220px !important;
+    padding: 2px !important;
+}
+
 /* NOT CONNECT */
 .not_connect {
 	display: block;
@@ -77,6 +89,11 @@ a {
 	font-size: 1.5em;
 }
 
+.collapse {
+    background-color: hsl(195, 54%, 60%);
+    float: right;
+}
+
 /* FRIEND PANEL */
 
 .table>tr>th {
@@ -86,21 +103,20 @@ a {
 
 .table>tr>td {
 	width : 30%;
-	padding-left: 15px;
+	padding-left: 35px;
 }
 
 /* ASIDE */
 .aside__container aside {
 	z-index: 0;
-	position: fixed;
 	border : 3px hsl(210, 60%, 50%) solid;
 	border-radius: 10px;
-	margin: 10px;
+
 	padding: 10px;
 	background-color: hsl(195, 54%, 40%);
 	border : none;
-	width: 20%;
-	top: 30%;
+
+	margin-top: 30px;
 	color :hsl(222, 1%, 97%);
 }
 
@@ -195,9 +211,13 @@ div, .friend_info:hover>div {
 
 
 /* MAIN */
+.central_box{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
 
 .box {
-	width: 55%;
+
 	margin: auto;
 	border : 2px black solid;
 	padding: 5px;	
@@ -236,13 +256,6 @@ div, .friend_info:hover>div {
 	display: inline-block;
 }
 
-.body_friend_title{
-	width: 55%;
-	margin: auto;
-	padding-top: 15px;
-	margin-bottom: -5px;
-}
-
 .led {
 	padding: 5px;
 	border-radius: 8px;
@@ -276,6 +289,12 @@ div, .friend_info:hover>div {
 	/*float : left;*/
 	margin-right: 60px;
 	margin-top: 5px;
+	font-size: 1.2em;
+	margin-left: 20px;
+}
+
+.progress-circular-bar{
+	fill : white;		
 }
 
 .me {
@@ -286,10 +305,17 @@ div, .friend_info:hover>div {
 .who_ping {
 	vertical-align: top;
 	align-self: center;
+	max-height: 300px;
+	max-width: 180px;
+	min-width: 150px;
+	overflow-y: auto;
+
+	
 }
 
 #ping_element {
 	display : inline-block;
+	
 }
 
 .ialic {
@@ -302,6 +328,7 @@ div, .friend_info:hover>div {
 
 #ping_element:hover>p {
 	display: block;
+
 }
 
 
